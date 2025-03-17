@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+                http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  <!-- Homepage -->
+  <url>
+    <loc>https://scissorsandscotch.com/</loc>
+    <lastmod>2023-03-15T12:00:00+00:00</lastmod>
+    <priority>1.0</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  
+  <!-- Services Page -->
+  <url>
+    <loc>https://scissorsandscotch.com/services</loc>
+    <lastmod>2023-03-15T12:00:00+00:00</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <!-- Locations Page -->
+  <url>
+    <loc>https://scissorsandscotch.com/locations</loc>
+    <lastmod>2023-03-15T12:00:00+00:00</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <!-- Membership Page -->
+  <url>
+    <loc>https://scissorsandscotch.com/membership</loc>
+    <lastmod>2023-03-15T12:00:00+00:00</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <!-- About Page -->
+  <url>
+    <loc>https://scissorsandscotch.com/about</loc>
+    <lastmod>2023-03-15T12:00:00+00:00</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <!-- Booking Page -->
+  <url>
+    <loc>https://scissorsandscotch.com/booking</loc>
+    <lastmod>2023-03-15T12:00:00+00:00</lastmod>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  
+  <!-- Contact Page -->
+  <url>
+    <loc>https://scissorsandscotch.com/contact</loc>
+    <lastmod>2023-03-15T12:00:00+00:00</lastmod>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <!-- Careers Page -->
+  <url>
+    <loc>https://scissorsandscotch.com/careers</loc>
+    <lastmod>2023-03-15T12:00:00+00:00</lastmod>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <!-- Blog Page -->
+  <url>
+    <loc>https://scissorsandscotch.com/blog</loc>
+    <lastmod>2023-03-15T12:00:00+00:00</lastmod>
+    <priority>0.7</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+</urlset> 
