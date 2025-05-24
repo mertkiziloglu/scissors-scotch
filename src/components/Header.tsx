@@ -22,25 +22,25 @@ const Header = () => {
           <Link href="/" className="flex-shrink-0">
             <Image
               src="https://ext.same-assets.com/3834002725/2929940995.png"
-              alt="Scissors & Scotch Logo"
-              width={120}
-              height={40}
-              className="h-auto w-auto"
+              alt="Modern Berber Salonu Logo"
+              width={100}
+              height={35}
+              className="h-auto w-auto md:w-[120px]"
             />
           </Link>
 
           {/* Mobile menu button */}
           <button
-            className="md:hidden text-secondary p-2"
+            className="md:hidden text-secondary p-2 hover:bg-gray-100 rounded-lg transition-colors"
             onClick={toggleMenu}
             aria-label="Toggle menu"
           >
             {isMenuOpen ? (
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-7 h-7">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
               </svg>
             ) : (
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-7 h-7">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
               </svg>
             )}
@@ -51,19 +51,16 @@ const Header = () => {
           {/* Desktop navigation */}
           <nav className="hidden md:flex items-center space-x-6">
             <Link href="/" className="text-secondary font-medium hover:text-primary transition-colors">
-              Home
+              Ana Sayfa
             </Link>
-            <Link href="/services" className="text-secondary font-medium hover:text-primary transition-colors">
-              Services
+            <Link href="/hizmetler" className="text-secondary font-medium hover:text-primary transition-colors">
+              Hizmetler
             </Link>
-            <Link href="/memberships" className="text-secondary font-medium hover:text-primary transition-colors">
-              Memberships
+            <Link href="/iletisim" className="text-secondary font-medium hover:text-primary transition-colors">
+              İletişim
             </Link>
-            <Link href="https://careers.scissorsscotch.com/" target="_blank" className="text-secondary font-medium hover:text-primary transition-colors">
-              Careers
-            </Link>
-            <Link href="/booking" className="btn-primary">
-              Book now
+            <Link href="tel:+905330986724" className="btn-primary">
+              Randevu Al
             </Link>
           </nav>
         </div>
@@ -73,22 +70,18 @@ const Header = () => {
       {isMenuOpen && (
         <div className="md:hidden bg-white border-b border-gray-200">
           <div className="container-custom py-4">
-
             <nav className="flex flex-col space-y-4">
               <Link href="/" className="text-secondary font-medium hover:text-primary transition-colors py-2">
-                Home
+                Ana Sayfa
               </Link>
-              <Link href="/services" className="text-secondary font-medium hover:text-primary transition-colors py-2">
-                Services
+              <Link href="/hizmetler" className="text-secondary font-medium hover:text-primary transition-colors py-2">
+                Hizmetler
               </Link>
-              <Link href="/memberships" className="text-secondary font-medium hover:text-primary transition-colors py-2">
-                Memberships
+              <Link href="/iletisim" className="text-secondary font-medium hover:text-primary transition-colors py-2">
+                İletişim
               </Link>
-              <Link href="https://careers.scissorsscotch.com/" target="_blank" className="text-secondary font-medium hover:text-primary transition-colors py-2">
-                Careers
-              </Link>
-              <Link href="/booking" className="btn-primary text-center">
-                Book now
+              <Link href="tel:+905330986724" className="btn-primary text-center">
+                Randevu Al
               </Link>
             </nav>
           </div>

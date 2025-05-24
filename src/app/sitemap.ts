@@ -1,71 +1,50 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://scissorsandscotch.com';
+  const baseUrl = 'https://your-domain.com';
   
-  // Define your routes
-  const routes = [
+  return [
     {
-      url: '/',
+      url: baseUrl,
       lastModified: new Date(),
-      changeFrequency: 'weekly',
+      changeFrequency: 'daily',
       priority: 1,
     },
     {
-      url: '/services',
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: '/locations',
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: '/membership',
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: '/about',
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: '/booking',
+      url: `${baseUrl}/hizmetler`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
-      url: '/contact',
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.6,
-    },
-    {
-      url: '/careers',
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.6,
-    },
-    {
-      url: '/blog',
+      url: `${baseUrl}/sac-kesimi`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/sakal-tiras`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/randevu`,
+      lastModified: new Date(),
+      changeFrequency: 'daily',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/iletisim`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
       priority: 0.7,
     },
+    {
+      url: `${baseUrl}/bolu-berber`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 1,
+    },
   ];
-
-  // Map the routes to the sitemap format
-  return routes.map((route) => ({
-    url: `${baseUrl}${route.url}`,
-    lastModified: route.lastModified,
-    changeFrequency: route.changeFrequency as MetadataRoute.Sitemap[number]['changeFrequency'],
-    priority: route.priority,
-  }));
 } 

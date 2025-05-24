@@ -31,24 +31,32 @@ export default function FaqSchema({ faqs }: FaqSchemaProps) {
 export function BarberFaqSchema() {
   const barberFaqs = [
     {
-      question: 'What services does Scissors & Scotch offer?',
-      answer: 'Scissors & Scotch offers premium men\'s haircuts, beard trims, hot towel shaves, and other grooming services. We also have a full-service bar where you can enjoy a complimentary drink with your service.',
+      question: 'Modern Berber Salonu hangi hizmetleri sunuyor?',
+      answer: 'Modern Berber Salonu olarak erkek saç kesimi, sakal tıraşı, sıcak havlu ile tıraş ve diğer bakım hizmetlerini sunuyoruz. Modern ve konforlu salonumuzda profesyonel hizmet veriyoruz.',
     },
     {
-      question: 'Do I need to make an appointment?',
-      answer: 'While we do accept walk-ins based on availability, we highly recommend booking an appointment to ensure you get the time slot that works best for you. You can book online through our website or by calling your local Scissors & Scotch.',
+      question: 'Randevu almak gerekli mi?',
+      answer: 'Müsaitlik durumuna göre randevusuz müşteri kabul etsek de, size en uygun saati ayırabilmemiz için önceden randevu almanızı öneriyoruz. Randevunuzu web sitemiz üzerinden veya telefon ile alabilirsiniz.',
     },
     {
-      question: 'What is included in a membership?',
-      answer: 'Our memberships include regular haircuts, discounts on additional services and retail products, priority booking, and complimentary drinks with each service. We offer different membership tiers to suit your needs.',
+      question: 'Üyelik paketleri neleri kapsıyor?',
+      answer: 'Üyelik paketlerimiz düzenli saç kesimi, ek hizmetlerde ve ürünlerde indirim, öncelikli randevu hakkı ve özel üye etkinliklerine katılım gibi avantajlar sunuyor. İhtiyaçlarınıza göre farklı üyelik seçeneklerimiz bulunmaktadır.',
     },
     {
-      question: 'How long does a typical haircut take?',
-      answer: 'A standard haircut at Scissors & Scotch takes approximately 30-45 minutes, depending on the style and complexity. We recommend allowing extra time to enjoy your complimentary drink in our lounge area.',
+      question: 'Saç kesimi ne kadar sürüyor?',
+      answer: 'Standart bir saç kesimi, stil ve karmaşıklığına bağlı olarak yaklaşık 30-45 dakika sürüyor. Size en iyi hizmeti sunabilmek için yeterli süreyi ayırıyoruz.',
     },
     {
-      question: 'Do you offer gift cards?',
-      answer: 'Yes, we offer gift cards that can be purchased online or in-store. They make a perfect gift for any occasion and can be used for services or retail products.',
+      question: 'Hediye kartı alabiliyor muyum?',
+      answer: 'Evet, online veya salonumuzdan hediye kartı satın alabilirsiniz. Her özel gün için mükemmel bir hediye seçeneği olan kartlarımız, tüm hizmet ve ürünlerimizde kullanılabilir.',
+    },
+    {
+      question: 'Boluda en iyi berber hangisi?',
+      answer: 'Modern Berber Salonu olarak Boluda en kaliteli ve profesyonel berberlik hizmetini sunuyoruz. Uzman kadromuz, modern ekipmanlarımız ve müşteri memnuniyetine verdiğimiz önem ile Bolunun tercih edilen berber salonuyuz.',
+    },
+    {
+      question: 'Fiyatlarınız nedir?',
+      answer: 'Saç kesimi, sakal tıraşı ve diğer bakım hizmetlerimizin güncel fiyat listesini salonumuzdan veya web sitemizden öğrenebilirsiniz. Üyelerimize özel indirimler sunuyoruz.',
     },
   ];
 

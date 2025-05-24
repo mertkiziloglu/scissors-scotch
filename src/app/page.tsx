@@ -2,6 +2,13 @@ import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SeoImage from "@/components/SeoImage";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Mehmet KIZILOGLU Hair Studio | Bolu'nun En İyi Erkek Kuaförü",
+  description: "Bolu'da profesyonel erkek saç kesimi ve bakımı için Mehmet KIZILOGLU Hair Studio. Modern ekipman, uzman ekip ve şık atmosfer ile hizmetinizdeyiz.",
+  keywords: "mehmet kızıloğlu, hair studio bolu, erkek kuaförü, saç kesimi, sakal tıraşı, cilt bakımı, bolu kuaför",
+};
 
 export default function Home() {
   return (
@@ -13,40 +20,43 @@ export default function Home() {
         <div className="relative h-[calc(100vh-80px)] min-h-[600px] w-full">
           <SeoImage
             src="https://ext.same-assets.com/1701950190/502358705.jpeg"
-            alt="Scissors & Scotch Barber Shop - Premium men's haircuts and grooming services"
+            alt="Modern Berber Salonu Bolu - Profesyonel erkek saç kesimi ve bakım hizmetleri"
             fill
             priority
             className="object-cover"
             sizes="100vw"
           />
           <div className="absolute inset-0 bg-black/30 flex flex-col items-center justify-center text-white p-4">
-            <h1 id="hero-heading" className="text-4xl md:text-6xl font-bold mb-6 text-center">Welcome to Scissors & Scotch</h1>
-            <p className="text-xl md:text-2xl mb-10 text-center max-w-2xl">...or as we like to call it, the best damn part of your day.</p>
-            <Link href="/booking" className="btn-primary" aria-label="Book an appointment now">
-              Book Now
+            <h1 className="text-4xl md:text-6xl font-bold text-white text-center mb-6">
+              Bolu'nun En İyi<br />Hair Studio'su
+            </h1>
+            <p className="text-xl md:text-2xl text-white text-center mb-8">
+              Profesyonel ekip ve modern ekipmanlarla<br />en iyi hizmeti sunuyoruz
+            </p>
+            <Link href="tel:+905330986724" className="btn-primary text-base md:text-lg w-full md:w-auto px-6 py-3 justify-center" aria-label="Hemen randevu alın">
+              Randevu Al
             </Link>
-            <p className="text-sm mt-6 italic max-w-lg text-center">*Unless you won the lottery or something. Then we're probably a close second.</p>
+            <p className="text-xs md:text-sm mt-4 md:mt-6 italic max-w-lg text-center">*Bolu'nun en iyi berber deneyimi için doğru yerdesiniz.</p>
           </div>
         </div>
       </section>
 
       {/* Do Yourself a Favor Section */}
-      <section className="py-16 bg-white" aria-labelledby="favor-heading">
-        <div className="container-custom">
-          <h2 id="favor-heading" className="section-title">Do yourself a favor</h2>
-          <p className="section-subtitle">
-            Scissors & Scotch is the grooming experience every man deserves - where traditional barbering and modern spa services meet your favorite watering hole. Sit back, relax, get groomed - then enjoy a cocktail, coffee, or cold one in our private lounge.
+      <section className="py-8 md:py-16 bg-white" aria-labelledby="favor-heading">
+        <div className="container-custom px-4 md:px-6">
+          <h2 id="favor-heading" className="text-2xl md:text-4xl font-bold mb-4 md:mb-6 text-center">Kendinize İyi Bakın</h2>
+          <p className="text-base md:text-lg text-center max-w-3xl mx-auto">
+            Modern Berber Salonu, her erkeğin hak ettiği bakım deneyimini sunar. Geleneksel berberlik ile modern spa hizmetlerini bir araya getiriyoruz. Arkanıza yaslanın, rahatlayın ve profesyonel bakımın keyfini çıkarın.
           </p>
-
         </div>
       </section>
 
       {/* Come for the grooming Section */}
-      <section className="py-12 bg-gray-100" aria-labelledby="grooming-heading">
-        <div className="container-custom">
-          <h2 id="grooming-heading" className="text-3xl font-bold mb-6 text-center">Come for the grooming. Stay for the booze.</h2>
-          <p className="text-xl mb-8 text-center max-w-3xl mx-auto">
-            At Scissors & Scotch, you'll find friendly, people, an impressive offering of grooming services and a fully-stocked bar. What we like to refer to as: the best damn part of your day.
+      <section className="py-8 md:py-12 bg-gray-100" aria-labelledby="grooming-heading">
+        <div className="container-custom px-4 md:px-6">
+          <h2 id="grooming-heading" className="text-2xl md:text-3xl font-bold mb-4 md:mb-6 text-center">Kaliteli Hizmet, Modern Atmosfer</h2>
+          <p className="text-base md:text-xl mb-6 md:mb-8 text-center max-w-3xl mx-auto">
+            Modern Berber Salonu'nda, güler yüzlü personel, etkileyici bakım hizmetleri ve modern bir atmosfer bulacaksınız. Biz buna kısaca: günün en iyi deneyimi diyoruz.
           </p>
         </div>
       </section>
@@ -54,7 +64,7 @@ export default function Home() {
       {/* Reviews Section */}
       <section className="py-16 bg-white">
         <div className="container-custom">
-          <h2 className="section-title">The people have spoken</h2>
+          <h2 className="section-title">Müşterilerimiz Ne Diyor?</h2>
           <div className="flex justify-center mb-6">
             <div className="flex items-center">
               <div className="flex text-yellow-400">
@@ -64,7 +74,7 @@ export default function Home() {
                   </svg>
                 ))}
               </div>
-              <span className="ml-2 text-gray-600 text-sm">4.9 / 5 | 4,000+ Google Reviews</span>
+              <span className="ml-2 text-gray-600 text-sm">4.9 / 5 | 1,000+ Google Değerlendirmesi</span>
             </div>
           </div>
 
@@ -72,113 +82,63 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
             {/* Review 1 */}
             <div className="bg-gray-50 p-6 rounded-md shadow-sm">
-              <p className="mb-4 text-gray-700 italic">"By far my favorite haircut experience ever."</p>
+              <p className="mb-4 text-gray-700 italic">"Şimdiye kadar yaşadığım en iyi saç kesimi deneyimi."</p>
               <div className="flex items-center">
                 <SeoImage
                   src="https://ext.same-assets.com/3902145908/2014903948.png"
-                  alt="Jay Simpson - Scissors & Scotch Customer"
+                  alt="Ahmet Yılmaz - Modern Berber Müşterisi"
                   width={40}
                   height={40}
                   className="rounded-full mr-3"
                 />
-                <h4 className="font-medium">Jay Simpson</h4>
+                <h4 className="font-medium">Ahmet Yılmaz</h4>
               </div>
             </div>
 
             {/* Review 2 */}
             <div className="bg-gray-50 p-6 rounded-md shadow-sm">
-              <p className="mb-4 text-gray-700 italic">"Love this place! I highly recommend it to anyone looking for a new shop."</p>
+              <p className="mb-4 text-gray-700 italic">"Harika bir yer! Yeni bir berber arayanlar için kesinlikle tavsiye ederim."</p>
               <div className="flex items-center">
                 <SeoImage
                   src="https://ext.same-assets.com/3808762242/1775579771.png"
-                  alt="Marquis Roy - Scissors & Scotch Customer"
+                  alt="Mehmet Kaya - Modern Berber Müşterisi"
                   width={40}
                   height={40}
                   className="rounded-full mr-3"
                 />
-                <h4 className="font-medium">Marquis Roy</h4>
+                <h4 className="font-medium">Mehmet Kaya</h4>
               </div>
             </div>
 
             {/* Review 3 */}
             <div className="bg-gray-50 p-6 rounded-md shadow-sm">
-              <p className="mb-4 text-gray-700 italic">"Awesome haircut. Awesome drinks. Awesome atmosphere."</p>
+              <p className="mb-4 text-gray-700 italic">"Mükemmel saç kesimi. Harika atmosfer. Profesyonel hizmet."</p>
               <div className="flex items-center">
                 <SeoImage
                   src="https://ext.same-assets.com/3380216555/3981322809.jpeg"
-                  alt="Damien Flores - Scissors & Scotch Customer"
+                  alt="Mustafa Demir - Modern Berber Müşterisi"
                   width={40}
                   height={40}
                   className="rounded-full mr-3"
                 />
-                <h4 className="font-medium">Damien Flores</h4>
+                <h4 className="font-medium">Mustafa Demir</h4>
               </div>
             </div>
 
             {/* Review 4 */}
             <div className="bg-gray-50 p-6 rounded-md shadow-sm">
-              <p className="mb-4 text-gray-700 italic">"Super friendly and helpful team. The service here is always an A+."</p>
+              <p className="mb-4 text-gray-700 italic">"Çok samimi ve yardımsever ekip. Hizmet kalitesi her zaman A+."</p>
               <div className="flex items-center">
                 <SeoImage
                   src="https://ext.same-assets.com/146233034/3865889983.jpeg"
-                  alt="Alex Miles - Scissors & Scotch Customer"
+                  alt="Ali Yıldız - Modern Berber Müşterisi"
                   width={40}
                   height={40}
                   className="rounded-full mr-3"
                 />
-                <h4 className="font-medium">Alex Miles</h4>
+                <h4 className="font-medium">Ali Yıldız</h4>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Membership Section */}
-      <section className="py-16 bg-gray-100">
-        <div className="container-custom">
-          <h2 className="section-title">We're Exclusively Inclusive</h2>
-          <p className="section-subtitle">
-            You don't need a membership to experience Scissors & Scotch, but our packages allow you to save while also enjoying plenty of perks. Benefits include special discounts, guest passes, member-only events and unlimited booze.
-          </p>
-          <p className="text-center italic mb-12">(...okay not the last one, but we got your attention, right?)</p>
-
-          {/* Perks */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            {/* Perk 1 */}
-            <div className="text-center">
-              <div className="text-primary mb-4 flex justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-10 h-10">
-                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1.41 16.09V20h-2.67v-1.93c-1.71-.36-3.16-1.46-3.27-3.4h1.96c.1 1.05.82 1.87 2.65 1.87 1.96 0 2.4-.98 2.4-1.59 0-.83-.44-1.61-2.67-2.14-2.48-.6-4.18-1.62-4.18-3.67 0-1.72 1.39-2.84 3.11-3.21V4h2.67v1.95c1.86.45 2.79 1.86 2.85 3.39H14.3c-.05-1.11-.64-1.87-2.22-1.87-1.5 0-2.4.68-2.4 1.64 0 .84.65 1.39 2.67 1.91s4.18 1.39 4.18 3.91c-.01 1.83-1.38 2.83-3.12 3.16z"></path>
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold mb-2">Free Upkeeps</h3>
-            </div>
-
-            {/* Perk 2 */}
-            <div className="text-center">
-              <div className="text-primary mb-4 flex justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-10 h-10">
-                  <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2zm-7 5h5v5h-5v-5z"></path>
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold mb-2">Member Events</h3>
-            </div>
-
-            {/* Perk 3 */}
-            <div className="text-center">
-              <div className="text-primary mb-4 flex justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-10 h-10">
-                  <path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z"></path>
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold mb-2">Special Discounts</h3>
-            </div>
-          </div>
-
-          <div className="text-center">
-            <Link href="/memberships" className="btn-primary">
-              Hell Yes
-            </Link>
           </div>
         </div>
       </section>
@@ -188,14 +148,14 @@ export default function Home() {
         <div className="relative h-[400px] w-full">
           <SeoImage
             src="https://ext.same-assets.com/149234666/2666641620.jpeg"
-            alt="Scissors & Scotch Gear"
+            alt="Modern Berber Salonu Ekipmanları"
             fill
             className="object-cover"
           />
           <div className="absolute inset-0 bg-black/30 flex flex-col items-center justify-center text-white p-4">
-            <h2 className="text-3xl md:text-5xl font-bold mb-8 text-center">See what you've been missing</h2>
-            <Link href="/booking" className="btn-primary">
-              Book Now
+            <h2 className="text-2xl md:text-5xl font-bold mb-6 md:mb-8 text-center">Farkı Hemen Keşfedin</h2>
+            <Link href="tel:+905330986724" className="btn-primary text-base md:text-lg w-full md:w-auto px-6 py-3 justify-center">
+              Randevu Al
             </Link>
           </div>
         </div>

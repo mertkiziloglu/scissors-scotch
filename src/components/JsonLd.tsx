@@ -21,109 +21,116 @@ export default function JsonLd({ data }: JsonLdProps) {
 }
 
 export function LocalBusinessJsonLd() {
-  const localBusinessData = {
-    '@context': 'https://schema.org',
-    '@type': 'BarberShop',
-    name: 'Scissors & Scotch',
-    description: 'Scissors & Scotch is the grooming experience every man deserves - where traditional barbering and modern spa services meet your favorite watering hole.',
-    url: 'https://scissorsandscotch.com',
-    logo: 'https://ext.same-assets.com/1701950190/502358705.jpeg',
-    image: 'https://ext.same-assets.com/1701950190/502358705.jpeg',
-    priceRange: '$$',
-    telephone: '+1-555-123-4567', // Replace with actual phone number
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: '123 Main Street', // Replace with actual address
-      addressLocality: 'City', // Replace with actual city
-      addressRegion: 'State', // Replace with actual state
-      postalCode: '12345', // Replace with actual postal code
-      addressCountry: 'US'
-    },
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: '40.7128', // Replace with actual coordinates
-      longitude: '-74.0060' // Replace with actual coordinates
-    },
-    openingHoursSpecification: [
-      {
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-        opens: '09:00',
-        closes: '19:00'
-      },
-      {
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Saturday'],
-        opens: '10:00',
-        closes: '18:00'
-      },
-      {
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Sunday'],
-        opens: '11:00',
-        closes: '16:00'
-      }
-    ],
-    sameAs: [
-      'https://www.facebook.com/scissorsandscotch',
-      'https://www.instagram.com/scissorsandscotch',
-      'https://twitter.com/scissorsscotch'
-    ],
-    offers: {
-      '@type': 'Offer',
-      description: 'Premium men\'s haircuts and grooming services',
-      price: '30.00', // Replace with actual starting price
-      priceCurrency: 'USD'
-    },
-    potentialAction: {
-      '@type': 'ReserveAction',
-      target: {
-        '@type': 'EntryPoint',
-        urlTemplate: 'https://scissorsandscotch.com/booking'
-      },
-      result: {
-        '@type': 'Reservation',
-        name: 'Book an appointment'
-      }
-    }
-  };
-
-  return <JsonLd data={localBusinessData} />;
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "HairSalon",
+          "name": "Modern Berber Salonu Bolu",
+          "image": "/images/salon.jpg",
+          "description": "Bolu'da profesyonel erkek saç kesimi ve bakım hizmetleri sunan modern berber salonu.",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "[ADRES]",
+            "addressLocality": "Bolu",
+            "addressRegion": "Bolu",
+            "postalCode": "14XXX",
+            "addressCountry": "TR"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "40.7339",
+            "longitude": "31.6082"
+          },
+          "url": "https://your-domain.com",
+          "telephone": "+90XXXXXXXXXX",
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+              "opens": "09:00",
+              "closes": "21:00"
+            }
+          ],
+          "priceRange": "₺₺",
+          "servesCuisine": "Turkish"
+        })
+      }}
+    />
+  );
 }
 
 export function ServiceJsonLd() {
-  const serviceData = {
-    '@context': 'https://schema.org',
-    '@type': 'Service',
-    serviceType: 'Men\'s Haircuts and Grooming',
-    provider: {
-      '@type': 'BarberShop',
-      name: 'Scissors & Scotch'
-    },
-    description: 'Premium men\'s haircuts, beard trims, and grooming services in a luxury environment with complimentary drinks.',
-    offers: {
-      '@type': 'Offer',
-      price: '30.00', // Replace with actual starting price
-      priceCurrency: 'USD'
-    }
-  };
-
-  return <JsonLd data={serviceData} />;
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "serviceType": "Berber Hizmetleri",
+          "provider": {
+            "@type": "LocalBusiness",
+            "name": "Modern Berber Salonu Bolu"
+          },
+          "areaServed": {
+            "@type": "City",
+            "name": "Bolu"
+          },
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Berber Hizmetleri",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Erkek Saç Kesimi",
+                  "description": "Profesyonel erkek saç kesimi hizmeti"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Sakal Tıraşı",
+                  "description": "Profesyonel sakal tıraşı ve şekillendirme"
+                }
+              }
+            ]
+          }
+        })
+      }}
+    />
+  );
 }
 
 export function BreadcrumbJsonLd() {
-  const breadcrumbData = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      {
-        '@type': 'ListItem',
-        position: 1,
-        name: 'Home',
-        item: 'https://scissorsandscotch.com'
-      }
-    ]
-  };
-
-  return <JsonLd data={breadcrumbData} />;
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Ana Sayfa",
+              "item": "https://your-domain.com"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Bolu Berber",
+              "item": "https://your-domain.com/bolu-berber"
+            }
+          ]
+        })
+      }}
+    />
+  );
 } 

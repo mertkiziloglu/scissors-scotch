@@ -1,9 +1,10 @@
 # Allow all crawlers
 User-agent: *
 Allow: /
+Allow: /sitemap.xml
 
 # Sitemap location
-Sitemap: https://scissorsandscotch.com/sitemap.xml
+Sitemap: https://your-domain.com/sitemap.xml
 
 # Disallow admin areas
 User-agent: *
@@ -12,4 +13,4 @@ Disallow: /api/
 
 # Crawl delay for all bots
 User-agent: *
-Crawl-delay: 10 
+Crawl-delay: 1 
